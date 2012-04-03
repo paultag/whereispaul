@@ -1,3 +1,4 @@
 *.pyc
 *.swp
 oauth.json
+cache.latitude.json

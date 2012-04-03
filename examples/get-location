@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+import json
+import whereispaul.latitude
+
+settings = json.load(open('oauth.json', 'r'))
+lat = whereispaul.latitude.Latitude(settings)
+whereis = lat.query('currentLocation')['data']
+
+print whereis

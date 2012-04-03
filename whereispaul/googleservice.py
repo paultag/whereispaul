@@ -96,10 +96,10 @@ class GoogleService:
             return self.get(self._url(resource), data)
         except urllib2.HTTPError as e:
             errors = e.read()
-            print "Error:"
-            print "  %s" % errors
+            #print "Error:"
+            #print "  %s" % errors
             if e.getcode() == 401:
-                print "Forcing a token refresh."
+                #print "Forcing a token refresh."
                 self._refresh_token()
                 return self.query(resource, **kwargs)
             raise
